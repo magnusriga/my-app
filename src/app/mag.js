@@ -26,6 +26,11 @@ const myResolve = resolve.create({
 });
 
 myResolve(__dirname, "my-app/baz", (err, result) => {
-	const res = result;
-  console.log('res :>> ', res);
+	const res1 = result;
+  console.log('Resolving my-app/baz :>> ', res1);
+});
+
+myResolve(__dirname, "#app/baz", (err, result) => {
+	const res2 = result;
+  console.log('Resolving #app/baz :>> ', res2);
 });
