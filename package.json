@@ -11,12 +11,14 @@
   "imports": {
     "#app/styles/*.scss": "./src/styles/*.scss",
     "#app/styles/*.css": "./src/styles/*.css",
-    "#app/*": "./src/app/*.js"
+    "#app/*": "./src/app/*.tsx"
   },
   "exports": {
     "./*": "./src/app/*.js"
   },
   "dependencies": {
+    "@types/eslint": "^8.56.5",
+    "enhanced-resolve": "^5.16.0",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18"

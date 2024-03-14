@@ -8,6 +8,12 @@ module.exports = {
       jsx: true,
     },
   },
+  env: {
+    // Needed, otherwise module and __dirname are not recognized by no-undef rule
+    browser: true,
+    amd: true,
+    node: true,
+  },
   root: true,
   plugins: ["import", "@typescript-eslint"],
   rules: {
@@ -16,7 +22,7 @@ module.exports = {
   },
   settings: {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"],
+      "@typescript-eslint/parser": [".ts", ".tsx", ".js", ".jsx"],
     },
     "import/resolver": {
       typescript: {

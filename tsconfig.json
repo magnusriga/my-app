@@ -31,9 +31,12 @@
     }
   },
   "include": [
+    ".",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     ".next/types/**/*.ts",
     "typings",
     "tools/**/*.ts",
