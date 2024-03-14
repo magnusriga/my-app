@@ -1,5 +1,11 @@
-import * as breakpointsExport from "#app/styles/_breakpoints.module.scss";
-// import bar from "./baz";
+import { Bar } from "#app/bar";
+import { Baz } from "my-app/baz";
 
-const breakpoints = breakpointsExport.default;
-// console.log('bar :>> ', bar);
+export const Foo = () => {
+  return (
+    <>
+      <Bar bar="bar" />
+      <Baz baz="baz" />
+    </>
+  );
+};

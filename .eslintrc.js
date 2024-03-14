@@ -1,6 +1,6 @@
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  "extends": "next/core-web-vitals",
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   parserOptions: {
     project: true,
     tsconfigRootDir: __dirname,
@@ -8,19 +8,20 @@ module.exports = {
       jsx: true,
     },
   },
-  "plugins": ["import"],
-  "rules": {
+  root: true,
+  plugins: ["import", "@typescript-eslint"],
+  rules: {
     // turn on errors for missing imports
-    "import/no-unresolved": "error"
+    "import/no-unresolved": "error",
   },
   settings: {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
-    'import/resolver': {
+    "import/resolver": {
       typescript: {
-        project: './tsconfig.json',
+        project: "./tsconfig.json",
       },
     },
-  }
-}
+  },
+};
